@@ -5,7 +5,7 @@ from datetime import datetime
 import pytz
 import random
 # Load dataset
-df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv')
+df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv') #Modify the path as your wish
 # Clean 'Installs' column
 df['Installs'] = df['Installs'].str.replace('[+,]', '', regex=True)
 df['Installs'] = pd.to_numeric(df['Installs'], errors='coerce')
@@ -53,7 +53,7 @@ if 18 <= hour < 20:
     fig.update_layout(geo=dict(showframe=False, showcoastlines=True))
 
     # Save to HTML
-    fig.write_html('C:/Users/Hemanth/OneDrive/Shiva/choropleth_map.html')
+    fig.write_html('C:/Users/Hemanth/OneDrive/Shiva/choropleth_map.html') #Modify the path as your wish
     print("Map saved as choropleth_map.html in respective path")
 else:
     print(f"Choropleth map is hidden. Current IST time: {current_time_ist.strftime('%H:%M:%S')} (Allowed: 18:00–20:00)")
