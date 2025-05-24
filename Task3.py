@@ -5,7 +5,7 @@ from datetime import datetime
 import pytz
 import os
 # Load dataset
-df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv')
+df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv') # Modify the path as we want
 # Define IST timezone
 ist = pytz.timezone('Asia/Kolkata')
 now_ist = datetime.now(ist)
@@ -13,7 +13,7 @@ current_hour = now_ist.hour
 # Remove invalid 'Installs' values (e.g., 'Free', missing, etc.)
 df = df[df['Installs'].str.contains(r'^\d+[+,]?', regex=True, na=False)]
 # Ensure output directory exists
-output_path = "C:/Users/Hemanth/OneDrive/Shiva/Install_trends.png"
+output_path = "C:/Users/Hemanth/OneDrive/Shiva/Install_trends.png" # Modify the path as we want
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 # Convert installs and reviews to numeric
 df['Installs'] = df['Installs'].str.replace('[+,]', '', regex=True).astype(float)
