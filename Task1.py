@@ -2,7 +2,7 @@ import pandas as pd
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 # Load dataset
-df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv')#Modify the path as your wish
+df = pd.read_csv('C:/Users/Hemanth/OneDrive/Shiva/Play Store Data.csv')# Modify the path as we want
 # Filter for Health & Fitness category
 health_apps = df[(df['Category'] == 'HEALTH_AND_FITNESS')]
 # Simulated 5-star reviews for demonstration
@@ -21,7 +21,7 @@ custom_stopwords.update(["app", "blue", "florida", "insurance", "features"])
 # Generate the word cloud
 wordcloud = WordCloud(width=800, height=400, background_color='white',stopwords=custom_stopwords, colormap='viridis').generate(text)
 # Save the word cloud image
-output_path = "C:/Users/Hemanth/OneDrive/Shiva/florida_blue_wordcloud.png" #Modify the path as your wish
+output_path = "C:/Users/Hemanth/OneDrive/Shiva/florida_blue_wordcloud.png" # Modify the path as we want
 wordcloud.to_file(output_path)
 # Display the word cloud
 plt.figure(figsize=(10, 5))
